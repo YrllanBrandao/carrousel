@@ -7,7 +7,7 @@ const setImage = document.querySelectorAll(".setImage");
 let index = 0;
 
 const clearSet = () => {
-
+   //essa função limpa a cor do seletor de imagem
   setImage.forEach((select) => {
 
     if (select.classList.contains('active'))
@@ -18,10 +18,12 @@ const clearSet = () => {
 
   })
 }
+
+
 setImage.forEach((choose)=>{
  
    
-   
+   //percorremos todas as imagens do carrousel e capturamos o index
     
    choose.addEventListener('click', () =>{
      
@@ -71,7 +73,7 @@ const decrementIndex =  () =>{
 
 const incrementIndex = () =>{
   
-
+  
   index++
   
   if (index > 3)
@@ -92,7 +94,7 @@ function carrousel(arg)
 {
   
   slide.forEach((img) =>{
-    
+    //percorrer imagens e verifica se a imagem está ativa e remove a classe, tornando a imagem invisível
     img.classList.add("notVisible");
     if(img.classList.contains('active'))
     {
